@@ -14,7 +14,7 @@ describe('Arithmetic', function() {
           .end(function(err, res) {
               expect(res.body).to.eql({ error: "Invalid operation: foobar" });
               done();
-          });
+          }); //test
     });
     it('rejects missing operand1', function(done) {
       request.get('/arithmetic?operation=add&operand2=21')
